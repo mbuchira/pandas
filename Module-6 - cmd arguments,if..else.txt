@@ -1,0 +1,63 @@
+Command Line Arguments: 
+-----------------------
+While running program arguments which are passing through commnd line
+are called as command line arguments .
+
+Here arguments are separated by space.
+
+>> python add.py 10 20
+
+* These argumens are stored by default in the form of strings in a list with name argv.
+  this is available in sys module.
+
+argv[0] --> add.py
+10  	--> 10
+20		--> 20
+
+cmnd_line.py
+===============
+
+import sys
+
+a = int(sys.argv[1])
+b = int(sys.argv[2])
+
+print(type(a))
+print(type(b))
+
+add = a + b
+print(add)
+
+NOTE : default it will take string so we have convert to integer
+
+execution : 
+
+C:\Users\welcome\Desktop>python cmnd_line.py 10 20
+
+
+Control statments(if..elif..else)
+============================
+
+ If any statment expecting its sub statements then it should be ended with : 
+
+conditional execution :
+
+if x > 0 :
+    print('x is positive')
+	
+Alternative execution : 
+
+if x%2 == 0 :
+    print('x is even')
+else :
+    print('x is odd')
+
+Chained conditionals :
+
+if x < y:
+    print 'x is less than y'
+elif x > y:
+    print 'x is greater than y'
+else:
+    print 'x and y are equal'	
+

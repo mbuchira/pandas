@@ -1,0 +1,108 @@
+What is Programming Language?
+--------------------------
+1.A programming language is a set of rules that
+provides a way of telling a computer what
+operations to perform.
+
+2.A programming language is a set of rules for
+communicating an algorithm
+
+3.It provides a linguistic framework for
+describing computations
+provides a way of telling a computer what
+operations to perform.
+
+Types of computer languages:
+--------------------------
+Machine Language : 
+
+     1.The fundamental language of the computer’s processor, also called Low Level Language.
+     2.All programs are converted into machine language before they can be executed.
+     3.Consists of combination of 0’s and 1’s that represent high and low electrical voltage.
+
+Assembly Language : 
+     1.A low level language that is similar to machine language.
+	 2.Uses symbolic operation code to represent the machine operation code.
+      Eg : 
+		LOAD r1,b
+		LOAD r2,h
+		MUL r1,r2
+		DIV r1,#2
+		RET
+
+High level Language : 
+
+	1.Computer (programming) languages that are easier to learn.
+	2.Uses English like statements.
+	3.Examples are Python,C ++, Visual Basic, Pascal, Fortran and …....
+
+What is Python?	
+-----------------
+1. Python is an easy to learn, powerful programming language. The application development process much faster and easier
+2. The programming language Python was conceived in the late 1980s, and its implementation was started in December 1989 by 
+    Guido van Rossum at  Netherlands as a successor to the ABC (programming language) 
+3. Python First release happened in 1991.
+4. Python was named for the BBC TV show Monty Python's Flying Circus.
+	
+	
+Why python?
+-----------
+1. Easy to understand
+2. Beginners language
+3. Portable
+4. Less lines of code
+5. Simple to implement
+6. Huge libraries supports
+
+Feautures of python: 
+-------------------
+1. Easy to learn and use.
+2. Expressive language
+3. Interpreted language.
+4. Cross platform language(windows,linux,mac)
+5. Free to install and opensource
+6. Object oriented language
+7. Extensible, Awesome online community
+8. Large standard library(numpy,scipy)
+9. GUI programming (Tkinter)
+
+Python Implemenation alternatives:
+-------------------------------
+1. CPython(stadnard implemenation of python)
+2. Jython(Python for java)
+3. IronPython( Python for .net)
+4. Stackless (Python for concurrency)
+5. PyPy ( Python for speed)
+
+Python Packages : 
+---------------
+1. Web devlopment - Django,Flask frameworks,Pylons,Web2py framworks.
+2. Artificiat Intelligence : Scikit-learn,Keras,TensorFlow,OpenCV
+3. GUI - TKinter
+4. Desktop Applications : Jython, WxPython
+5. Game Development : pygame
+6. Testing : Spliter Tool,pytest framework
+7. Bigdata : Pydoop,DASK,PySpark Libraries
+8. DataScience : NumPy,Pandas,matplotlib,seaborn libraries
+9. AWS : boto
+10. Robotic process : pyro
+11. Web Scraping : Beautifulsoup4,urllib2,mechanize
+12. Devops & System Admin : Os,Sys,Shutil,Glob,Subprocess,PathLib,fabric
+13. Networking : Twisted,socket,client and server
+
+Who uses Python : 
+------------------
+
+Data engineers, data scientists, System administrators and
+developers. Python is not industry specific, but task specific—great
+for data processing, business intelligence, and some application
+development
+
+Google, You Tube,
+Instagram, DropBox,
+Survey Monkey, Quora,
+Pinterest, Reddit
+Yahoo Maps,…..
+Duration
+
+

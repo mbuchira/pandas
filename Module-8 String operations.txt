@@ -1,0 +1,608 @@
+String operations:
+=====================
+
+declaration statements
+
+>>> s1 = 'welcome to python'
+>>> print(s1)
+welcome to python
+>>> s2 = "welcome to python"
+>>> print(s2)
+welcome to python
+>>> s3 = ''' welcomt to python
+python is portable '''
+>>> print(s3)
+ welcomt to python
+python is portable 
+>>> s4 = """ welcome to python
+python is portable """
+>>> print(s4)
+ welcome to python
+python is portable 
+
+length of string : 
+-------------
+>>> len(s4)
+38
+>>> len(s1)
+17
+
+Indexing of string : 
+------------------
+
+p	y	t	h	o	n
+0	1	2	3	4	5
+-6	-5	-4	-3	-2	-1
+
+
+Strling slicing : 
+=================
+
+	name = 'Quality Thought!'
+
+	print(name)          # Prints complete string
+	print (name[0])       # Prints first character of the string
+	print (name[2:5])     # Prints characters starting from 3rd to 5th
+	print (name[2:])      # Prints string starting from 3rd character
+	print (name * 2)      # Prints string two times
+	print (name + "INSTITUTE") # Prints concatenated string
+	
+
+		
+	Quality Thought!
+	Q
+	ali
+	ality Thought!
+	Quality Thought!Quality Thought!
+	Quality Thought!INSTITUTE
+
+	
+>>> name = "quality thought"
+>>> name[::1]
+'quality thought'
+>>> name[::-1]
+'thguoht ytilauq'	
+	
+	
+string reverse:
+================
+
+s = "python"
+
+
+	for i in s:
+	print(i,end='')
+
+print("\n")
+	
+for i in range(len(s)-1,-1,-1):
+	print(s[i],end ='')
+
+print("\n")	
+
+for i in range(-1,-len(s)-1,-1):
+	print(s[i],end='')
+#p			y		t		h		o 		n
+#0			1		2		3		4		5
+#-6         -5       -4      -3       -2       -1
+#
+#len(s) --> 6
+
+
+>>> str1 = "welcome"
+>>> str1[0:3]
+'wel'
+>>> str1[::-1]
+'emoclew'
+
+
+repeating string : 
+--------------------
+
+>>> str1 = "python"
+>>> str1 * 2
+'pythonpython'
+
+
+>>> str1 = "core python"
+
+>>> str1[3 : 5]
+'e '
+>>> str1[5:7]
+'py'
+>>> str1[5:7] * 2
+
+concatenation of strings: 
+-----------------------
+
+>>> str1 = "python"
+>>> str2 = "hadoop"
+>>> s3 = s1 + s2
+
+>>> s3 = str1 + str2
+>>> print(s3)
+
+checking membership:
+----------------------
+
+>>>str1 = "come"
+>>> str2 = "welcome to python"
+>>> if(str1 in str2):
+	print("membership")
+	
+	
+
+comparting strings; 
+-------------------
+
+s1 = "book"
+s2 = "pen"
+if(s1 == s2):
+	print("same")
+else: 
+	print("not same")
+	
+
+Remvoing spaces from string : 
+-------------------------====
+
+lstrip() --> remove spaces left side
+rstrip() --> remove spaces right side
+strip() ---> remove spaces both sides
+
+>>> if ('python' == '  python'):
+	print("same")
+else:
+	print("not same")
+
+	
+not same
+>>> if('python' == '  python'.lstrip()):
+	print("same")
+else:
+	print("not same")
+
+	
+same
+
+
+Finding substrings: 
+--------------------
+
+find(),index(),rfind(),rindex()
+
+it will return first occurrence of substring in give string
+
+mainstring.find(substring,beging,ending)
+
+
+>>> str1 = "welcome to python"
+
+>>> str2 = "to"
+>>> n = str1.find(str2,0,len(str1))
+>>>print("string find at %s position" % (n+1))
+
+>>> n = str1.index(str2,0,len(str1))
+
+
+To return all occurrences of sub string : 
+-----------------------
+
+str1 = "This is a pen"
+sub = "is"
+
+i = 0
+flag = False
+
+n = len(str1)
+
+while i < n:
+	pos = str1.find(sub,i,n)
+	if pos != -1:
+		print("found at position:", pos + 1)
+		i = pos + 1
+		flag = True
+	else:
+		i = i + 1
+
+if flag == False:
+	print("sub string not found")
+	
+
+counting substring in a string :
+
+-----------------
+
+str1 = 'welcome to python . python is portable'
+
+n = str1.count('python')
+
+print(n)
+
+
+str1 = 'python python'
+
+n = str1.count('p',0,5)
+
+print(n)
+
+ 
+
+
+str1 = 'python is opensource. python is portable'
+
+n = str1.count('python',0,len(str1))
+
+print(n)
+
+
+
+Strings are Immutable :
+
+-------------------------
+
+ 
+In python :
+
+
+numbers, strings,tuples -> Immutable
+
+Lists,sets,dictionaries --> mutable
+
+ 
+
+str1 = "welcome to python"
+
+print(str1[4])
+
+ str1[4] = 'Y'
+
+ 
+
+ Replacing a string with another string :
+
+-----------------------------------------
+
+ stringname.replace(old,new)
+
+ 
+>>> str = 'this is a beautiful girl'
+
+>>> str1 = 'girl'
+
+>>> str2 = 'flower'
+
+>>> print(str.replace(str1,str2))
+
+this is a beautiful flower
+
+>>> 
+
+ 
+
+splitting and joining strings:
+
+----------------------------------
+
+ 
+splitting :
+
+=========
+
+ 
+
+str = "one,two,three,four"
+str_lst = str.split(',')
+
+ print(str_lst)
+
+ 
+
+for i in str_lst:
+
+                print(i)
+
+               
+
+['one', 'two', 'three', 'four']
+
+one
+
+two
+
+three
+
+four
+
+ 
+
+joining:
+
+==========
+
+separator.join(str)
+
+here str is list.
+
+str = "one,two,three,four"
+
+str_lst = str.split(',')
+
+print(str_lst)
+
+for i in str_lst:
+
+                print(i)
+
+               
+
+str2 = '|'.join(str_lst)
+
+print(str2)
+
+ 
+
+D:\Users\phani\Desktop>python python_exercise.py
+
+['one', 'two', 'three', 'four']
+
+one
+
+two
+
+three
+
+four
+
+one|two|three|four
+
+
+
+str = ['apple','guava','grapes','mango']
+
+sep = ':'
+
+str1 = sep.join(str)
+
+print(str1)
+
+ 
+
+D:\Users\phani\Desktop>python python_exercise.py
+
+apple:guava:grapes:mango
+
+ 
+
+ 
+
+ 
+
+Changing case of string:
+
+-----------------------
+
+
+str = 'Welcome to quality thought'
+
+
+
+str = 'Welcome to quality thought'
+
+print(str)
+
+print(str.upper())
+
+print(str.lower())
+
+print(str.swapcase())
+
+print(str.title())
+
+ 
+
+D:\Users\phani\Desktop>python python_exercise.py
+
+Welcome to quality thought
+
+WELCOME TO QUALITY THOUGHT
+
+welcome to quality thought
+
+wELCOME TO QUALITY THOUGHT
+
+Welcome To Quality Thought
+============================================================
+
+String testing methods:
+----------------------
+
+isalnum() -->  [a to z,A to Z,0-9]
+isalpha() -->  [ a to z , A to Z]
+isdigit() -->  [0-9]
+islower() -->   [a to z]
+istitle() ---> each of word of string starts with capital letter
+
+>>> str = "QualityThought!"
+>>> str.isalnum()
+False
+>>> str = "QualityThought123"
+>>> str.isalnum()
+True
+
+
+
+>>> str = "QualityThought"
+>>> str.isalpha()
+True
+>>> str1 = "QualityThougth123"
+>>> str1.isalpha()
+False
+
+
+
+>>> str1 = "12345"
+>>> str1.isdigit()
+True
+>>> str2 = "123abcd"
+>>> str2.isdigit()
+False
+
+
+
+>>> str1 = "welcome to python"
+>>> str1.istitle()
+False
+>>> str2 = "Welcome To Python"
+>>> str2.istitle()
+True
+
+
+mobile number validation
+--------------------------
+num=input("enter mobile number\n".title())
+
+if (len(str(num)) != 10):
+	print("invalid mobile number")
+elif (str(num).isdigit()== False):
+	print(" in_valid mobile number")
+else:
+	print(" valid mobile number")
+
+
+Formatting the strings :
+------------------------
+
+Formatting a string means presenting string in clearly understandable manner
+
+The format() method is used to format strings. This method is used as : 
+
+Syntax: 
+
+'format string with replacement fiedls'.format(values)
+
+Here the replacement fields are denoted by {} that contain names and indexes.
+These names or indexes represent the order of the values.
+
+For example:
+
+id = 101
+name = 'srinivas'
+sal = 19500.75
+
+str = '{}{}{}'.format(id,name,sal)
+
+>>> id = 101
+>>> name = 'srinivas'
+>>> sal = 19500.75
+
+>>> str = '{}{}{}'.format(id,name,sal)
+
+>>> print(str)
+101srinivas19500.75
+
+>>> str = '{},{},{}'.format(id,name,sal)
+>>> print(str)
+101,srinivas,19500.75
+
+>>> str = '{}-{}-{}'.format(id,name,sal)
+>>> print(str)
+101-srinivas-19500.75
+
+>>> str = 'ID={},NAME={},SAL={}'.format(id,name,sal)
+>>> print(str)
+ID=101,NAME=srinivas,SAL=19500.75
+
+>>> str = 'ID={}\nNAME={}\nSAL={}'.format(id,name,sal)
+>>> print(str)
+ID=101
+NAME=srinivas
+SAL=19500.75
+
+
+
+>>> str = 'ID={0}\nNAME={1}\nSAL={2}'.format(id,name,sal)
+>>> print(str)
+ID=101
+NAME=srinivas
+SAL=19500.75
+>>> str = 'ID={1}\nNAME={0}\nSAL={2}'.format(id,name,sal)
+>>> print(str)
+ID=srinivas
+NAME=101
+SAL=19500.75
+>>> str = 'ID={a}\nNAME={b}\nSAL={c}'.format(a=id,b=name,c=sal)
+>>> print(str)
+ID=101
+NAME=srinivas
+SAL=19500.75
+
+
+>>> str = 'ID={:d}\nNAME={:s}\nSAL={:f}'.format(id,name,sal)
+>>> print(str)
+ID=101
+NAME=srinivas
+SAL=19500.750000
+>>> str = 'ID={:d}\nNAME={:s}\nSAL={:.2f}'.format(id,name,sal)
+>>> print(str)
+ID=101
+NAME=srinivas
+SAL=19500.75
+>>> str = 'ID={:d}\nNAME={:s}\nSAL={:10.2f}'.format(id,name,sal)
+>>> print(str)
+ID=101
+NAME=srinivas
+SAL=  19500.75
+
+consolidated list of format operations.
+
+print('{}{}{}'.format(id,name,sal))
+print('{}-{}-{}'.format(id,name,sal))
+print('{}\n{}\n{}'.format(id,name,sal))
+print('ID={}\nNAME={}\nSAL={}'.format(id,name,sal))
+print('ID={0}\n NAME={1}\n SAL={2}'.format(id,name,sal))
+print('ID={1}\n NAME={0}\n SAL={2}'.format(id,name,sal))
+print('ID={a}\n NAME={b}\n SAL={c}'.format(a=id,b=name,c=sal))
+print('ID={b}\n NAME={a}\n SAL={c}'.format(a=id,b=name,c=sal))
+print('ID={:d}\n NAME={:s}\n SAL={:f}'.format(id,name,sal))
+print('ID={:d}\n NAME={:s}\n SAL={:.2f}'.format(id,name,sal))
+print('ID={:d}\n NAME={:s}\n SAL={:10.2f}'.format(id,name,sal))
+
+
+sorting strings:
+---------------
+We can sort group of strings into alphabetical order using sort() method and sorted() function.
+
+The sort() method used in the following way: 
+str.sort()
+
+Here 'str' represents a group of strings. when sort() method is used,it will sort the original i.e 'str.
+
+So the original order of strings will be lost and we will have one sorted strings.
+
+To retain the original even after sorting ,we can use below sorted function.
+
+str1 = sorted(str)
+
+
+
+
+>>> str = ['ball','cat','appple']
+>>> str.sort()
+>>> str
+['appple', 'ball', 'cat']
+>>> str = ['ball','cat','appple']
+>>> str
+['ball', 'cat', 'appple']
+>>> sorted(str)
+['appple', 'ball', 'cat']
+>>> str
+['ball', 'cat', 'appple']
+>>> 
+
+
+>>> str1 = sorted(str)
+>>> str1
+['appple', 'ball', 'cat']
+>>> str
+['ball', 'cat', 'appple']

@@ -1,0 +1,261 @@
+﻿Day3
+========
+
+Proogram execution in IDLE
+---------------------------
+
+1. Open your IDLE
+2. File ---> new  
+   It will open a new untitled window
+   provide your program instructions and save it.
+   In same window you can select Run --> Runmodule(5)
+3. The output will display on IDLE screen.
+
+Python print()
+-----------------------   
+
+Print Statement : 
+---------------
+
+
+eg: 
+>>print('Welcome to python') 
+>>print('Python is OpenSource')
+
+>>print("welcome to python")
+>>print("Python is OpenSource")
+
+above two are valid
+
+Below are invalid.
+>>	print("welcome to python")
+>>print("Python is OpenSource")
+
+Error due to indentation
+** Statement should start in first column
+
+** Printing double quotes with in string
+
+>>> print("Welcome to \"QualityThought\" ")
+Welcome to "QualityThought"
+>>> print("Welcome to \'QualityThought\' ")
+Welcome to 'QualityThought'
+
+
+** Printing multiple times
+
+>>>print("QualityThought"*5)
+QualityThoughtQualityThoughtQualityThoughtQualityThoughtQualityThought
+
+
+>>>print("QualityThought\n"*5)
+QualityThought
+QualityThought
+QualityThought
+QualityThought
+QualityThought
+
+
+>>> a = 2
+>>> print(" %d is a value" %a)
+ 2 is a value
+>>> str1 = "srinivas"
+>>> print("Welcome Mr."+str1)
+Welcome Mr.srinivas
+>>> print("welcome Mr.%s" %str1)
+welcome Mr.srinivas
+
+
+>>> a = 2.334
+>>> print("value of a is %f" %a)
+value of a is 2.334000
+>>> print("value of a is %d" %a)
+value of a is 2
+
+>>> proudct_name = "Mobile"
+>>> product_code = 101
+
+>>> print("proudct name is ",proudct_name,"product_code is",product_code)
+proudct name is  Mobile product_code is 101
+=====================================================
+
+Python Variable: 
+----------------
+variable : 
+Think of a number. Any number. Now, before you forget that number, let’s store it for later.
+When you think of a number, you are holding that value in your head.
+ If you want to remember it  you will write it down on a piece of paper.
+And if it’s really important, you will put it in a safe place. 
+In computer science, that safe place is a variable. They’re called variables because, well, they’re “capable of being varied or changed” 
+   
+--A variable is a memory location where a programmer can store a value. Example : roll_no, amount, name etc.
+--Value is either string, numeric etc. Example : "Sara", 120, 25.36
+--Variables are created when first assigned.
+--The value stored in a variable can be accessed or updated later.
+--No declaration required
+--The type (string, int, float etc.) of the variable is determined by Python
+--The interpreter allocates memory on the basis of the data type of a variable.
+
+
+
+Rules for python variables :
+=========================
+
+--Must begin with a letter (a - z, A - B) or underscore (_)
+
+>>> @account_number = 34525
+SyntaxError: invalid syntax
+
+>>> _account_number=34525
+>>> print(_account_number)
+34525
+
+--Other characters can be letters, numbers or _
+-- Must not contain any special characters !, @, #, $, %
+>>> a@ = 20
+SyntaxError: inva--lid syntax
+>>> a$ = 49
+SyntaxError: invalid syntax
+
+
+--Case Sensitive
+
+>>> product_name = 'TV'
+>>> print(product_name)
+TV
+>>> print(Product_name)
+
+Traceback (most recent call last):
+  File "<pyshell#26>", line 1, in <module>
+    print(Product_name)
+NameError: name 'Product_name' is not defined
+>>> print(PRODUCT_NAME)
+
+Traceback (most recent call last):
+  File "<pyshell#27>", line 1, in <module>
+    print(PRODUCT_NAME)
+NameError: name 'PRODUCT_NAME' is not defined
+
+
+
+--There are some reserved words which you cannot use as a variable name because Python uses them for other things.
+>>> for = 10
+SyntaxError: invalid syntax 
+
+Good Variable Name : 
+========================
+**Choose meaningful name instead of short name. roll_no is better than rno.
+**Maintain the length of a variable name. Roll_no_of_a-student is too long?
+**Be consistent; roll_no or RollNo
+**Begin a variable name with an underscore(_) character for a special case. 
+
+ 
+Multi assignment
+
+a=10
+print(a)
+
+Name='RAVI'
+Age=21
+
+ 
+a = b = c = 1
+print(a)
+print(b)
+print(c)
+
+
+
+a,b,c = 10,20,"QualityThought"
+print(a)
+print(b)
+print(c)
+
+
+Swaping variable 
+
+
+Python swap values in a single line and this applies to all objects in python.
+
+Syntax:
+
+var1, var2 = var2, var1
+Example:
+
+>>> x = 10
+>>> y = 20
+>>> print(x)
+10
+>>> print(y)
+20
+>>> x, y = y, x
+>>> print(x)
+20
+>>> print(y)
+10
+>>>
+
+>>> student1 = 'RAVI'
+>>> student2 = 'RANI'
+   
+string concatenation
+
+>>> print("student1 is " + student1+ "\n" + "student2 is " + student2)
+
+student1 is RAVI
+student2 is RANI
+
+id() function
+--------------
+
+Every instance (object or variable) has an identity, i.e. an integer which is unique within the script or program, 
+i.e. other objects have different identities
+
+>>> x = 30
+>>> id(x)
+19489708
+>>> y = 40
+>>> id(y)
+19489588
+>>> z = y
+>>> id(z)
+19489588
+
+
+>>> x = 40
+>>> id(x)
+19489588
+>>> k = 40
+>>> id(k)
+19489588
+
+Here id is created for value not for variable.
+
+ 
+ 
+COMMENTS: 
+-=======
+
+Python Comments: 
+===============
+1. Single line comment ----> #
+2. Multi line comments -----> ''' or """
+
+Input()
+------
+>>> a = input()
+12
+>>> print(a)
+12
+
+>>> age = input("Enter your age \n")
+Enter your age 
+28
+>>> print(age)
+28
+
+
+
+
+
+

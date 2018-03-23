@@ -1,0 +1,586 @@
+Python Datatypes : 
+================
+A datatype represents the type of data stored into a variable or memory.
+
+Buitin datatypes -- Already available in python
+User defined datatypes -- Datatypes created by programmers
+
+1. Built in datatypes : 
+	
+	* None Type
+	* Numaric Types --> int,float,complex
+	* Sequences     --> str,bytes,bytearray,list,tuple,range
+	* Sets          --> set,frozenset 
+	* Mappings      --> dict
+
+	
+	Determine datatype : 
+----------------
+type(variable name)
+
+	
+None : 
+-----
+	 'None' datatype represents an object that does not contain any value.
+	  In java - NULL
+	  In Python - None  
+
+	>> print(type(None))
+	>>
+
+	>>> def calc():
+...     a=10
+...     b=20
+...     c=a+b
+...
+
+    >>> calc()
+    >>> res = calc()
+    >>> type(res)
+    <class 'NoneType'>
+	
+	
+>>> if(res==None):
+...     print("does not return any values")
+...
+does not return any values
+
+Numaric dataypes : 
+--------------------
+1. int
+2. float
+3. complex
+
+int : 
+	* Int represents an integer number. 
+	* It is number with out decimal part and fraction part
+	* There is no limit for size of int datatype. It can store any integer number conveniently.
+
+	Eg : 
+			>>> a = 20
+			>>> type(a)
+			<class 'int'>
+			>>> a = -234
+			>>> print(a)
+			-234
+			>>> a = 22222222222222222222222222222222222222222222222222222222
+			>>> print(a)
+			22222222222222222222222222222222222222222222222222222222
+			>>> type(a)
+			<class 'int'>
+
+Float : 
+	* Float represents floating number 
+	* A floating number contains decimal part
+	
+	Eg: 
+			>>> a = 223.345
+			>>> type(a)
+			<class 'float'>
+			>>> a = 22e5
+			>>> print(a)
+			2200000.0
+			
+			
+Converting the datatype explicitly : 
+--------------------------------
+>>> x = 23
+>>> type(x)
+<class 'int'>
+>>> b = float(x)
+>>> print(b)
+23.0
+>>> c = 23.345
+>>> d = int(c)
+>>> print(d)
+23
+
+Complex Datatype : 
+
+		* complex number is number that is written in the form of a+bj or a+bJ
+			a : real part
+			b : imaginary part
+		
+	Eg : 
+	
+			>>> a = 1+2j
+			>>> b = 2+3j
+			>>> c = a+b
+			>>> print(c)
+			(3+5j)
+	
+			>>> c = 1+2j
+			>>> d = 1-2j
+			>>> res = c * d
+			>>> print(res)
+			(5+0j)
+			
+			
+			
+
+ 
+	
+bool datatype : 
+	
+		The bool datatype in python represents boolean values.
+	
+	
+	>>> a = 20
+     >>> b = 10
+     >>> print(a>b)
+     True
+     >>> print(a<b)
+     False
+     >>> c=print(a>b)
+     True
+     >>> print(c)
+     None
+     >>> c=a>b
+     >>> print(c)
+     True
+     
+     
+     >>> True + True
+     2
+     >>> True - False
+     1		
+     
+     >>> file1 = True
+     >>> file2 = True
+     >>> file3 = True
+     >>> print(file1+file2+file3)
+     3
+	
+	
+ Sequences in Python : 
+ --------------------
+ 
+ A sequence represents a group of elements or items.
+ 
+ eg : group of integer numbers will form seqence 
+ 
+ There are six types of sequences in python : 
+ 
+ 1. str
+ 2. bytes
+ 3. bytearray
+ 4. list
+ 5. tuple
+ 6. range 
+ 
+str datatype : 
+
+		* str represents string datatype.
+		* string represents group of characters
+		* string enclosed in single quotes or double quotes('',"")
+		* string can also be represent in """ or '''(if assign to variable then string otherwise it would be comment only)
+		
+		
+		eg : 
+		
+		>>> print(word)
+		welcome
+		>>> word = "welcome"
+		>>> print(word)
+		welcome
+		>>> word = '''welcome'''
+		>>> print(word)
+		welcome
+		>>> word = """welcome"""
+		>>> print(word)
+		welcome
+		
+	for = 'Quality Thought!'
+	SyntaxError: invalid syntax (for is key word, variable name should not be key word)
+		
+	name = 'Quality Thought!'
+
+	print(name)          # Prints complete string
+	print (name[0])       # Prints first character of the string
+	print (name[2:5])     # Prints characters starting from 3rd to 5th
+	print (name[2:])      # Prints string starting from 3rd character
+	print (name * 2)      # Prints string two times
+	print (name + "INSTITUTE") # Prints concatenated string
+	
+	
+	
+	Quality Thought!
+	Q
+	ali
+	ality Thought!
+	Quality Thought!Quality Thought!
+	Quality Thought!INSTITUTE
+	
+	Note : explain about file processing , file name contain date
+	
+	>>> name[0:4]
+'Qual'
+>>> name[0:6:2]
+'Qai'
+>>> print(name[0:4])
+Qual
+>>> print(name[0:6:2])
+Qai
+
+	
+	There is no char datatype like C in python. 
+	
+	>>> ch = 'A'
+	>>> type(ch)
+	<class 'str'>
+	
+	>>> ch = 'A'
+	>>> type(ch)
+	<class 'str'>
+	>>> name = "ravi"
+	>>> name[0]
+	's'
+		
+	
+	
+bytes datatype : 
+ 
+		The bytes datatype represents a group of byte numbers just like an array does.
+		* should be 0 to 255
+		* Does not support negative numbers
+
+		>>> a = [12,23,45]
+		>>> x = bytes(a)
+		>>> type(x)
+		<class 'bytes'>
+		>>> x[0]=55
+		Traceback (most recent call last):
+		File "<pyshell#120>", line 1, in <module>
+			x[0]=55
+		TypeError: 'bytes' object does not support item assignment
+		>>> a = [12,23,45,345]
+		>>> x = bytes(a) x
+		Traceback (most recent call last):
+		File "<pyshell#122>", line 1, in <module>
+			x = bytes(a)
+		ValueError: bytes must be in range(0, 256)
+		>>> a = [12,23,45,-23]
+		>>> x = bytes(a)
+		Traceback (most recent call last):
+		File "<pyshell#124>", line 1, in <module>
+		x = bytes(a)
+		ValueError: bytes must be in range(0, 256)
+
+bytearray datatype : 
+
+		* The bytearray datatype is similar to bytes data type. The difference is that
+		the bytes type array can not be modified but bytearray can be modified
+		
+		>>> a = [12,23,34,54]
+		>>> x = bytearray(a)
+		>>> print(x[0])
+		12
+		>>> x[0] = 55
+		>>> for i in x:
+			print(i)	
+		55
+		23
+		34
+		54
+
+List datatype : 
+
+		
+		List  : Store different data type elements, can grow dynamically.
+		
+		* List represent in [] and elements separated by ,
+	
+		>>> a= [101,"ravi",'NRT']
+		>>> b =[102,"raju","HYD"]
+		>>> a[0]
+		101
+		>>> a[0:2]
+		[101, 'ravi']
+		>>> b[:3]
+		[102, 'raju', 'HYD']
+		
+		>>> print(a)
+		[101, 'ravi', 'NRT']
+		>>> type(a)
+		<class 'list'>
+		
+		>>> print(a)
+		[101, 'ravi', 'NRT']
+		>>> a[0]
+		101
+		>>> a[0] = 111
+		>>> print(a)
+		[111, 'ravi', 'NRT']               
+		
+		list elements can be modified
+		
+		
+		
+list = [ 'abcd', 786 , 2.23, 'john', 70.2 ]
+tinylist = [123, 'john']
+
+print(list)          # Prints complete list
+print(list[0])       # Prints first element of the list
+print(list[1:3])     # Prints elements starting from 2nd till 3rd 
+print(list[2:])      # Prints elements starting from 3rd element
+print(tinylist * 2)  # Prints list two times
+print(list + tinylist) # Prints concatenated lists
+This produce the following result −
+
+['abcd', 786, 2.23, 'john', 70.200000000000003]
+abcd
+[786, 2.23]
+[2.23, 'john', 70.200000000000003]
+[123, 'john', 123, 'john']
+['abcd', 786, 2.23, 'john', 70.200000000000003, 123, 'john']
+		
+		
+		
+		
+		
+		
+
+tuple datatype : 
+
+		* Tuple is similar to list. 
+		* Can contain different datatypes of elements
+		* Represents ()
+		* Differene between list and tuple is 
+			can not modify the tuple so tuple is read only list.
+
+			>>> account_details = (101,"ravi","NRT")
+			>>> type(account_details)
+			<class 'tuple'>
+			>>> account_details[0]
+			101
+			>>> account_details[1]
+			'ravi'
+			>>> account_details[1] = "raju"
+			Traceback (most recent call last):
+			File "<pyshell#171>", line 1, in <module>
+				account_details[1] = "raju"
+			TypeError: 'tuple' object does not support item assignment
+			
+			
+tuple = ( 'abcd', 786 , 2.23, 'john', 70.2  )
+tinytuple = (123, 'john')
+
+print(tuple)           # Prints complete list
+print(tuple[0])        # Prints first element of the list
+print(tuple[1:3])      # Prints elements starting from 2nd till 3rd 
+print(tuple[2:])       # Prints elements starting from 3rd element
+print(tinytuple * 2)   # Prints list two times
+print(tuple + tinytuple) # Prints concatenated lists
+
+range data type : 
+-----------------
+		* range data type represents sequence of numbers.
+		* The numbers in range are not modifiable
+		* Generally range is used for repeating a for loop for specific number of times.
+		
+		>>> a = range(10)
+		>>> print(a)
+		range(0, 10)
+		>>> type(a)
+		<class 'range'>
+		>>> for i in a:
+			print(i)
+		
+			
+		0
+		1
+		2
+		3
+		4
+		5
+		6
+		7
+		8
+		9
+
+		
+		
+		>>> r = range(10,30,3)
+		>>> for i in r:
+			print(i)
+		
+			
+		10
+		13
+		16
+		19
+		22
+		25
+		28
+		
+
+		>>> r = range(10,30,3)
+		>>> for i in r:
+			print(i)
+		
+			
+		10
+		13
+		16
+		19
+		22
+		25
+		28
+ 
+ Sets : 
+ 
+	A set is an unordered collection of elements much like a set in mathematics.
+	
+	* Order of elements is not maintained. It means elements may not appear in the same order as they entered in to set.
+	* Set does not accept duplicate elements	
+	* Two types of sets
+		1. set datatype
+		2. frozenset datatype
+	
+	set datatype : 
+		* set elements should separated with ,
+		* set always print only unique elements.
+	
+	
+		>>> s = {10,20,30,40,50}
+		>>> print(s)
+		{40, 10, 50, 20, 30}
+		>>> type(s)
+		<class 'set'>
+		>>> s = {10,10,20,20,30,30}
+		>>> print(s)
+		{10, 20, 30}
+ 
+		>>> str1 = set("srinivas")
+		>>> print(str1)
+		{'r', 'v', 'n', 'a', 's', 'i'}
+		
+		>>> str2 = list(str1)
+		>>> print(str2)
+		['r', 'v', 'n', 'a', 's', 'i']
+		>>> print(str2[0])
+		r
+		>>> print(str2[1])
+		v
+		
+		>>> s = {10,20,30,40}
+		>>> s.update([50])        // adding element to set
+		>>> print(s)
+		{40, 10, 50, 20, 30}
+		>>> 
+		>>> print(s)
+		{40, 10, 50, 20, 30}
+		>>> s.remove(50)            // remove element from set
+		>>> print(s)
+		{40, 10, 20, 30}
+		
+	fronzenset datatype: 
+	
+		* Create frozenset by passing set data
+		* Can not be modified (update and remove methods will not work)
+		
+		
+		>>> s = {50,60,70,80,90}
+		>>> fs = frozenset(s)
+		>>> type(fs)
+		<class 'frozenset'>
+		>>> print(fs)
+		frozenset({80, 50, 70, 90, 60})
+		>>> s = {50,50,60,60,70}
+		>>> fs1 = frozenset(s)
+		>>> type(fs1)
+		<class 'frozenset'>
+		>>> print(fs1)
+		frozenset({50, 60, 70})
+		
+	
+Mapping Type : 
+-------------
+	* map represents a group of elements in the form of key values pairs so that when key is given
+	  will retrive a value.
+	  
+	 * The 'dict' datatype is an example of map
+	 * dict represents dictionary that contains of pair of elements first one is Key and second one is Value
+	 * key and value separated by ':'
+	 
+	
+		>>> d = {101:"Ram",102:"Ravi",103:"Rani"}
+		>>> print(d)
+		{101: 'Ram', 102: 'Ravi', 103: 'Rani'}
+		>>> d[101]
+		'Ram'
+		>>> d[102]
+		'Ravi'
+		>>> type(d)
+		<class 'dict'>
+
+		
+dict = {}
+dict['one'] = "This is one"
+dict[2]     = "This is two"
+
+tinydict = {'name': 'john','code':6734, 'dept': 'sales'}
+
+
+print(dict['one'])       # Prints value for 'one' key
+print(dict[2])           # Prints value for 2 key
+print(tinydict)          # Prints complete dictionary
+print(tinydict.keys())   # Prints all the keys
+print(tinydict.values()) # Prints all the values
+
+
+Difference between List and Tuple:
+-------------------------------
+
+
+1. Literal
+someTuple = (1,2)
+someList  = [1,2] 
+
+2. Size
+>>> a = [1,2,3,4,5]
+>>> b = (1,2,3,4,5)
+>>> a.__sizeof__()
+40
+>>> b.__sizeof__()
+32
+
+3. permitted operations
+b    = [1,2]   
+b[0] = 3       # [3, 2]
+
+a    = (1,2)
+a[0] = 3       # Error
+
+
+
+>>>
+>>> a = [1,2]
+>>> a = a + [3]
+>>> print(a)
+[1, 2, 3]
+
+>>> a = (1,2)
+>>> a = a + (3,)
+>>> print(a)
+(1, 2, 3)
+
+you could add new element to both list and tuple with the only difference that you will change id of the tuple by adding element
+
+a     = (1,2)
+b     = [1,2]  
+
+id(a)          # 140230916716520
+id(b)          # 748527696
+
+a   += (3,)    # (1, 2, 3)
+b   += [3]     # [1, 2, 3]
+
+id(a)          # 140230916878160
+id(b)          # 748527696
+
+
+2. User defined datatypes : 
+         array,class or a module is user defined datatypes
+		 
+		 
